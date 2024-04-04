@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Button} from "react-native";
 
 const ListExercises= (props)=>{
   const textStyle = props.completed ? [styles.text, styles.completedText] : styles.text;
@@ -12,11 +12,11 @@ const ListExercises= (props)=>{
         <Text style={textStyle}>{props.text}</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity 
-      onPress={() => props.onDeleted(props.text)}
-      >
-        <Text style={styles.deleteButton}>X</Text>
-      </TouchableOpacity>
+      <Button 
+        style={styles.deleteButton}
+        title="X"
+        onPress={() => props.onDeleted(props.text)}
+      />
     </View>
   )
 }
@@ -26,23 +26,19 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    padding: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: "#ccc"
+    borderBottomColor: "#ccc",
+    width: 200,
+    marginTop: 20,
+    marginLeft: 50
   },
   text: {
-    fontSize: 16,
-    textDecorationLine: "none"
+    fontSize: 20,
+    textDecorationLine: "none",
   },
   completedText: {
-    color: "red",
+    color: "blue",
     textDecorationLine: "line-through"
   },
-  deleteButton: {
-    fontSize: 16,
-    color: "blue",
-    marginLeft: 10
-  }
 })
 
 export { ListExercises }

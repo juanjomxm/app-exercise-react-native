@@ -35,14 +35,22 @@ const ExerciseForm = ()=>{
                     
                     <View style={{ backgroundColor: 'black', padding: 20}}>
                         <TextInput
-                        style={{ height: 200, borderColor: "gray", borderWidth: 1, marginBottom: 20 }}
+                        style={{ height: 100, width: 200, borderColor: "gray", borderWidth: 1, marginBottom: 20, textAlign: 'center' }}
                         placeholder="Inicia tu rutina"
                         multiline={true}
                         value={newExerciseValue}
                         onChangeText={setNewExerciseValue}
                         />
-                        <Button title="Cancelar" onPress={onCancel} />
-                        <Button title="Agregar" onPress={onSubmit} />
+                        
+                        <View>
+                            <Button title="Cancelar" onPress={onCancel} />
+                            {/* <Button title="Agregar" onPress={onSubmit} /> */}
+                        </View>
+
+                        <View style={{marginTop:5}}>
+                            {/* <Button title="Cancelar" onPress={onCancel} /> */}
+                            <Button title="Agregar" onPress={onSubmit} />
+                        </View>
                     </View>
                 </View>
         </Modal>

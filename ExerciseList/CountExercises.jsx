@@ -10,18 +10,19 @@ const CountExercises = ()=>{
 
     return(
         <View>
-            <Text>Has completado {completedExercise} de {totalExercise} ejercicios</Text>
+            <Text style={styles.title}>Has completado {completedExercise} de {totalExercise} ejercicios</Text>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-});
+    title: {
+      fontSize: 18,
+      fontWeight: "bold",
+      color: "white",
+      textAlign: "center",
+      marginTop: 50
+    }
+})
 
 export { CountExercises }

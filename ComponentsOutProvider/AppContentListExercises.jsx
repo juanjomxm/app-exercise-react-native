@@ -11,7 +11,7 @@ const AppContentList = ()=>{
     } = React.useContext(GlobalContext)
 
     return(
-        <View style={styles.container}>
+        <View>
             {initExercise.map(item => ( // Esta es la manera de trabajar con arrays, sus objetos y su manipulacion en react, despues de el componente, debemos indicar una key que concuerde con el objeto que se desea obtener. Al escribir el metodo para obetener el return no es en llaves si no en parentesis. Estoy ejecutando un estado derivado para poder filtrar el resultado que deseo
             <ListExercises
                 key={item.text} 
@@ -24,15 +24,6 @@ const AppContentList = ()=>{
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-});
 
 export { AppContentList }
 
