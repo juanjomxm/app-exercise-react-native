@@ -5,12 +5,13 @@ import { GlobalContext } from "../GlobalContext/GlobalContext";
 
 import { StyleSheet, View  } from "react-native";
 
-function AppContent() {
-    const { modalVisible } = React.useContext(GlobalContext);
+const AppContent = ()=>{
+    const{
+      modalVisible 
+    } = React.useContext(GlobalContext);
   
     return (
       <View style={styles.container}>
-        <CreateExercise />
         {modalVisible && (
           <ExerciseForm/>
         )}
@@ -25,6 +26,6 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
-  });
+});
 
 export {AppContent}

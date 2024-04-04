@@ -34,9 +34,7 @@ const ExerciseProvider = ({children})=>{
   // Al dar clik en esta funcion el ejercicio aparecera como completado
   const exerciseCompleted = (text)=>{
     const newExercise =[...exercises]
-     const exerciseIndex = newExercise.findIndex(
-      (item) => item.text == text
-     )
+    const exerciseIndex = newExercise.findIndex((item) => item.text === text)
     newExercise[exerciseIndex].completed = true
     saveExercises(newExercise)
   }
@@ -44,9 +42,7 @@ const ExerciseProvider = ({children})=>{
   // Funcion para eliminar el ejercicio
   const deletedExercise = (text)=>{
     const newExercise = [...exercises]
-    const exerciseIndex = newExercise.findIndex(
-      (item) => item.text == text
-     )
+    const exerciseIndex = newExercise.findIndex((item) => item.text === text)
     newExercise[exerciseIndex].completed = true
     newExercise.splice(exerciseIndex, 1)
     saveExercises(newExercise)
